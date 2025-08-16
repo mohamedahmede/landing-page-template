@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --Main-Color: linear-gradient(93deg, #FF9898 0.48%, #8054FF 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,4 +17,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom main background class */
+.bg-main {
+  background: var(--Main-Color) !important;
 }

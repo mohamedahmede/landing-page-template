@@ -19,7 +19,7 @@ const CustomButton = ({ title, action, url }: CustomButtonProps) => {
   return (
     <button
       onClick={handleClick}
-      className="py-3 px-7 font-semibold text-base bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
+      className="py-3 px-7 font-semibold text-base bg-main text-white rounded-lg transition-all duration-200 hover:opacity-90"
     >
       {title}
     </button>
