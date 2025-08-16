@@ -5,9 +5,10 @@ interface CustomButtonProps {
 	action?: () => void;
 	url?: string;
 	disabled?: boolean;
+	customClass?: string;
 }
 
-const CustomButton = ({ title, action, url, disabled }: CustomButtonProps) => {
+const CustomButton = ({ title, action, url, disabled, customClass }: CustomButtonProps) => {
 	const handleClick = () => {
 		if (url) {
 			window.open(url, "_blank");
@@ -22,7 +23,7 @@ const CustomButton = ({ title, action, url, disabled }: CustomButtonProps) => {
 			onClick={handleClick}
 			className={`py-3 px-7 font-semibold text-base bg-main text-white rounded-lg transition-all duration-200 hover:opacity-90 ${
 				disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-			}`}
+			} ${customClass}`}
 			disabled={disabled}
 		>
 			{title}

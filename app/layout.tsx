@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${poppinsSemiBold.variable} antialiased font-poppins`}
+        className={`${poppins.variable} ${poppinsSemiBold.variable} antialiased font-poppins bg-main`}
         style={{
           fontFamily: poppins.style.fontFamily
         }}

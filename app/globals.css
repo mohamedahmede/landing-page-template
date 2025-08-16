@@ -4,6 +4,8 @@
   --background: #ffffff;
   --foreground: #171717;
   --Main-Color: linear-gradient(93deg, #FF9898 0.48%, #8054FF 100%);
+  --Dark-Gray: #18181C;
+  --third-gray: #26262C;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,9 +19,51 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Custom main background class */
+/* Typography defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #9E9E9E;
+  margin: 0;
+}
+
+/* Custom background classes */
 .bg-main {
   background: var(--Main-Color) !important;
+}
+
+.bg-second {
+  background: var(--Dark-Gray) !important;
+}
+
+.bg-third {
+  background: var(--third-gray) !important;
 }

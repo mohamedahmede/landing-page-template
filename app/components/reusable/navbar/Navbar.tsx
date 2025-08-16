@@ -4,7 +4,7 @@ import Logo from "../icons/Logo";
 
 const Navbar = () => {
 	return (
-		<nav className="flex justify-between items-center px-[10.31rem] py-[1.69rem]">
+		<nav className="fixed w-full flex justify-between items-center px-[10.31rem] py-[1.69rem] bg-black">
 			<div className="left">
 				<Link href="/">
 					<Logo />
