@@ -1,5 +1,6 @@
 import Companies from "./components/homePage/companies/Companies";
 import FeatureBoxes from "./components/homePage/featureBoxes/FeatureBoxes";
+import GetInTouch from "./components/homePage/getInTouch/GetInTouch";
 import GuideSection from "./components/homePage/guideSection/GuideSection";
 import HomeHeaderSection from "./components/homePage/HomeHeaderSection";
 import CustomButton from "./components/reusable/buttons/CustomButton";
@@ -16,6 +17,7 @@ export default function Home() {
 			<FeatureBoxes />
 			<GuideSection />
 			<Companies />
+			<GetInTouch />
 			{/* <svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="1440"

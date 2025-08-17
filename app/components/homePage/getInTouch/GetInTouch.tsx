@@ -1,0 +1,96 @@
+"use client";
+
+import { Formik, Form } from "formik";
+import {
+	contactSchema,
+	ContactValues,
+} from "@/app/utils/validation/contactSchema";
+import CustomButton from "../../reusable/buttons/CustomButton";
+import TextArea from "../../reusable/form/TextArea";
+import TextInput from "../../reusable/form/TextInput";
+import Image from "next/image";
+
+const GetInTouch = () => {
+	const initialValues: ContactValues = { email: "", name: "", message: "" };
+
+	return (
+		<section className="relative overflow-hidden pt-[18.19rem] pb-[4.95rem] bg-black text-white">
+			<div className="flex  items-center gap-[4.27rem] ps-[8.13rem] pe-[12.62rem]">
+				{/* Left: your Figma SVG */}
+				<div className="relative aspect-square w-[33.54263rem]">
+					{/* optional tiny glow blobs */}
+					<div className="pointer-events-none absolute left-4 top-6 size-24 rounded-full bg-white/10 blur-3xl" />
+					<div className="pointer-events-none absolute bottom-6 right-8 size-28 rounded-full bg-white/10 blur-3xl" />
+
+					{/* Next.js Image for the SVG from /public */}
+					<Image
+						src="/images/world-sphere.svg"
+						alt=""
+						fill
+						priority
+						sizes="(min-width:1024px) 28rem, 60vw"
+						className="select-none opacity-35 object-contain animate-spin-slow"
+					/>
+				</div>
+
+				{/* Right: copy + form */}
+				<div className="flex items-center">
+					<div className="w-full max-w-xl">
+						<h2 className="capitalize">Get in touch</h2>
+						<p className="w-[31.4375rem]">
+							A good design is not only aesthetically pleasing, but also
+							functional. It should be able to solve the problem
+						</p>
+
+						<div className="pt-7 w-[25.5rem]">
+							<Formik
+								initialValues={initialValues}
+								validationSchema={contactSchema}
+								onSubmit={async (values, { resetForm, setSubmitting }) => {
+									try {
+										await fetch("/api/contact", {
+											method: "POST",
+											headers: { "Content-Type": "application/json" },
+											body: JSON.stringify(values),
+										});
+										resetForm();
+									} finally {
+										setSubmitting(false);
+									}
+								}}
+								validateOnBlur
+								validateOnChange={false}
+							>
+								{({ isSubmitting }) => (
+									<Form className="space-y-[1.12rem]">
+										<TextInput
+											name="email"
+											type="email"
+											placeholder="you@example.com"
+										/>
+										<TextInput name="name" placeholder="John Doe" />
+										<TextArea
+											name="message"
+											placeholder="How can we help?"
+											rows={5}
+										/>
+
+										<div className="pt-2">
+											<CustomButton
+												type="submit"
+												disabled={isSubmitting}
+												title={isSubmitting ? "Sending…" : "Get in Touch"}
+											/>
+										</div>
+									</Form>
+								)}
+							</Formik>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default GetInTouch;

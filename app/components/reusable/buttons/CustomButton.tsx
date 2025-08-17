@@ -7,6 +7,7 @@ interface CustomButtonProps {
 	disabled?: boolean;
 	customClass?: string;
 	black?: boolean;
+	type?: "button" | "submit" | "reset";
 }
 
 const CustomButton = ({
@@ -16,6 +17,7 @@ const CustomButton = ({
 	disabled,
 	customClass,
 	black,
+	type,
 }: CustomButtonProps) => {
 	const handleClick = () => {
 		if (url) {
@@ -35,6 +37,7 @@ const CustomButton = ({
 				disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
 			} ${customClass}`}
 			disabled={disabled}
+			type={type}
 		>
 			{title}
 		</button>

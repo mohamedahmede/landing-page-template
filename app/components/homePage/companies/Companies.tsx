@@ -55,7 +55,7 @@ const Companies = () => {
 					</div>
 				))}
 			</div>
-			<div className="companies_banner absolute top-[31rem] left-0 w-full">
+			<div className="companies_banner absolute top-[31rem] left-0 w-full z-1">
 				<CompaniesBanner />
 				
 			</div>
