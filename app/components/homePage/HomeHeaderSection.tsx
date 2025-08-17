@@ -12,7 +12,7 @@ const HomeHeaderSection = ({
 	buttonUrl: string;
 }) => {
 	return (
-		<section className="pt-[10.56rem]  text-center bg-black">
+		<section className="pt-[10.56rem]  text-center">
 			<h1 className="text-h1 font-semibold tracking-tight px-[21.62rem] pb-[1.13rem]">
 				{title}
 			</h1>

@@ -1,4 +1,5 @@
 import FeatureBoxes from "./components/homePage/featureBoxes/FeatureBoxes";
+import GuideSection from "./components/homePage/guideSection/GuideSection";
 import HomeHeaderSection from "./components/homePage/HomeHeaderSection";
 import CustomButton from "./components/reusable/buttons/CustomButton";
 
@@ -8,10 +9,11 @@ export default function Home() {
 			<HomeHeaderSection
 				title="Beautiful Landing Page Design for You"
 				description="A good design is not only aesthetically pleasing, but also functional. It should be able to solve the problem"
-        buttonTitle="Download Template"
-        buttonUrl="https://github.com/mohamedahmede/landing-page-template/tree/main"
+				buttonTitle="Download Template"
+				buttonUrl="https://github.com/mohamedahmede/landing-page-template/tree/main"
 			/>
-      <FeatureBoxes />
+			<FeatureBoxes />
+			<GuideSection />
 			{/* <svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="1440"
