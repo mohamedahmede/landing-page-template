@@ -2,6 +2,7 @@ import Image from "next/image";
 import CustomButton from "../../reusable/buttons/CustomButton";
 import RadialOrbitIcon from "../../reusable/icons/guideSection/RadialOrbitIcon";
 import Orbit from "./Orbit";
+import OrbitLogo from "../../reusable/icons/guideSection/OrbitLogo";
 
 const GuideSection = () => {
 	return (
@@ -10,7 +11,11 @@ const GuideSection = () => {
 				<div className="relative left w-[42.375rem] h-[42.375rem]">
 					<Orbit
 						className="w-full h-full"
-						center={<span className="text-3xl text-white">∞</span>}
+						center={
+							<span className=" w-[4.0625rem] h-[3.3125rem]">
+								<OrbitLogo />
+							</span>
+						}
 						rings={[1, 0.78, 0.58, 0.4]}
 						items={[
 							// IMAGES — exactly 4.125rem (66px)
@@ -109,7 +114,9 @@ const GuideSection = () => {
 
 				{/* RIGHT */}
 				<div className="right flex flex-col items-start justify-center text-white">
-					<h2 className="w-[27.6875rem] pb-3">We&apos;re here to guide and help you at all times</h2>
+					<h2 className="w-[27.6875rem] pb-3">
+						We&apos;re here to guide and help you at all times
+					</h2>
 					<p className="w-[24.0625rem] pb-[1.56rem]">
 						A good design is not only aesthetically pleasing, but also
 						functional. It should be able to solve the problem

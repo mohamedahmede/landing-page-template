@@ -28,19 +28,24 @@ body {
 
 /* Typography defaults */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0;
 }
 
 h1 {
+  font-family: var(--font-poppins-semibold), ui-sans-serif, system-ui, sans-serif;
   font-size: 4rem;
   line-height: 5rem;
+  font-weight: 600;
+
 }
 
 h2 {
+  font-family: var(--font-poppins-semibold), ui-sans-serif, system-ui, sans-serif;
   font-size: 3rem;
   line-height: 5rem;
+  font-weight: 600;
+
 }
 
 h3 {

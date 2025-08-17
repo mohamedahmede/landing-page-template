@@ -1,3 +1,4 @@
+import Companies from "./components/homePage/companies/Companies";
 import FeatureBoxes from "./components/homePage/featureBoxes/FeatureBoxes";
 import GuideSection from "./components/homePage/guideSection/GuideSection";
 import HomeHeaderSection from "./components/homePage/HomeHeaderSection";
@@ -14,6 +15,7 @@ export default function Home() {
 			/>
 			<FeatureBoxes />
 			<GuideSection />
+			<Companies />
 			{/* <svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="1440"

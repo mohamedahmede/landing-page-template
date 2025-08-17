@@ -40,7 +40,7 @@ export default function Orbit({
       {/* center */}
       {center && (
         <div className="absolute inset-0 z-10 grid place-items-center">
-          <div className="flex items-center justify-center w-28 h-28 rounded-full bg-white/[0.06] ring-1 ring-white/10">
+          <div className="flex items-center justify-center w-[8.07144rem] h-[8.07144rem] rounded-full bg-second ring-1 ring-white/10">
             {center}
           </div>
         </div>
