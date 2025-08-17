@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Alisa from "../../reusable/icons/companies/Alisa";
 import Happy from "../../reusable/icons/companies/Happy";
 import Natural from "../../reusable/icons/companies/Natural";
@@ -56,6 +57,7 @@ const Companies = () => {
 			</div>
 			<div className="companies_banner absolute top-[31rem] left-0 w-full">
 				<CompaniesBanner />
+				
 			</div>
 		</section>
 	);

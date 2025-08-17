@@ -1,10 +1,11 @@
+import Image from "next/image";
 import CustomButton from "../../reusable/buttons/CustomButton";
 
 const CompaniesBanner = () => {
 	return (
 		<div className="w-full px-[10.31rem]">
 			<div
-				className=" pt-[6.19rem] pb-18 ps-[6.06rem] w-full rounded-[2.5rem]"
+				className=" pt-[6.19rem] pb-18 ps-[6.06rem] w-full rounded-[2.5rem] relative"
 				style={{
 					background: "linear-gradient(136deg, #FF9898 14.73%, #8054FF 86.33%)",
 				}}
@@ -18,6 +19,9 @@ const CompaniesBanner = () => {
 					title="Download Template"
 					url="https://github.com/mohamedahmede/landing-page-template/tree/main"
 				/>
+				<div className="absolute top-8 -right-[11rem] w-[45.72869rem] h-[23.0625rem] ">
+					<Image src="/images/companies-map.svg" alt="companies-banner" fill />
+				</div>
 			</div>
 		</div>
 	);
