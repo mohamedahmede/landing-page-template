@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CustomButton from "../reusable/buttons/CustomButton";
+import BackgroundCircle from "../reusable/icons/BackgroundCircle";
 
 const HomeHeaderSection = ({
 	title,
@@ -14,7 +15,14 @@ const HomeHeaderSection = ({
 }) => {
 	return (
 		<section className="pt-[10.56rem] text-center bg-black relative">
-			<header className="flex flex-col items-center">
+			{/* --- Background Circles --- */}
+			<div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+				<BackgroundCircle className="absolute left-[20%] top-[73%] w-[8rem] h-[8rem] " />
+				<BackgroundCircle className="absolute right-[12%] top-[45%] w-[8rem] h-[8rem] " />
+				<BackgroundCircle className="absolute left-1/2 top-[20%] -translate-x-1/2 w-16 h-16 " />
+			</div>
+
+			<header className="flex flex-col items-center relative z-10">
 				<h1 className="text-h1 font-semibold tracking-tight px-8 lg:px-[21.62rem] pb-[1.13rem]">
 					{title}
 				</h1>
