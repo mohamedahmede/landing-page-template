@@ -6,6 +6,24 @@
   --Main-Color: linear-gradient(93deg, #FF9898 0.48%, #8054FF 100%);
   --Dark-Gray: #18181C;
   --third-gray: #26262C;
+  
+  /* Responsive font size variables - smaller on mobile, original on desktop */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1.125rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 3rem);
+  --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 4rem);
+  --font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 5rem);
+  
+  /* Responsive line height variables */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +37,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -34,31 +52,62 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: var(--font-poppins-semibold), ui-sans-serif, system-ui, sans-serif;
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: clamp(2.5rem, 2rem + 2.5vw, 4rem); /* 2.5rem on mobile, 4rem on desktop */
+  line-height: clamp(3rem, 2.5rem + 2.5vw, 5rem); /* 3rem on mobile, 5rem on desktop */
   font-weight: 600;
-
 }
 
 h2 {
   font-family: var(--font-poppins-semibold), ui-sans-serif, system-ui, sans-serif;
-  font-size: 3rem;
-  line-height: 5rem;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem); /* 2rem on mobile, 3rem on desktop */
+  line-height: clamp(2.5rem, 2rem + 3vw, 5rem); /* 2.5rem on mobile, 5rem on desktop */
   font-weight: 600;
-
 }
 
 h3 {
-  font-size: 1.25rem;
-  line-height: 2rem;
+  font-size: clamp(1.125rem, 1rem + 0.25vw, 1.25rem); /* 1.125rem on mobile, 1.25rem on desktop */
+  line-height: clamp(1.75rem, 1.5rem + 0.5vw, 2rem); /* 1.75rem on mobile, 2rem on desktop */
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+}
+
+h5 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+h6 {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
 }
 
 p {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: clamp(1rem, 0.9rem + 0.125vw, 1.125rem); /* 1rem on mobile, 1.125rem on desktop */
+  line-height: clamp(1.5rem, 1.375rem + 0.375vw, 1.75rem); /* 1.5rem on mobile, 1.75rem on desktop */
   color: #9E9E9E;
   margin: 0;
 }
+
+/* Responsive text utilities */
+.text-responsive-xs { font-size: var(--font-size-xs); }
+.text-responsive-sm { font-size: var(--font-size-sm); }
+.text-responsive-base { font-size: var(--font-size-base); }
+.text-responsive-lg { font-size: var(--font-size-lg); }
+.text-responsive-xl { font-size: var(--font-size-xl); }
+.text-responsive-2xl { font-size: var(--font-size-2xl); }
+.text-responsive-3xl { font-size: var(--font-size-3xl); }
+.text-responsive-4xl { font-size: var(--font-size-4xl); }
+.text-responsive-5xl { font-size: var(--font-size-5xl); }
+
+/* Responsive line height utilities */
+.leading-responsive-tight { line-height: var(--line-height-tight); }
+.leading-responsive-snug { line-height: var(--line-height-snug); }
+.leading-responsive-normal { line-height: var(--line-height-normal); }
+.leading-responsive-relaxed { line-height: var(--line-height-relaxed); }
+.leading-responsive-loose { line-height: var(--line-height-loose); }
 
 /* Custom background classes */
 .bg-main {

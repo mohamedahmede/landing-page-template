@@ -41,11 +41,11 @@ const Companies = () => {
 		},
 	];
 	return (
-		<section className="bg-second pt-28 pb-[20.19rem] flex flex-col items-center relative">
-			<h2 className="w-[35.44rem] pb-[4.38rem] text-center">
+		<section className="bg-second pt-28 pb-28 xl:pb-[20.19rem] flex flex-col items-center relative">
+			<h2 className="lg:w-[35.44rem] pb-[4.38rem] text-center">
 				Companies we Worked With in Since 2015
 			</h2>
-			<div className="companies_container px-[10.31rem] flex justify-center gap-[1.87rem] ">
+			<div className="companies_container px-4 md:px-8 xl:px-[10.31rem] flex flex-wrap xl:flex-nowrap justify-center gap-[1.87rem] ">
 				{companiesDummyData.map((company) => (
 					<div
 						key={company.id}
@@ -55,7 +55,7 @@ const Companies = () => {
 					</div>
 				))}
 			</div>
-			<div className="companies_banner absolute top-[31rem] left-0 w-full z-1">
+			<div className="companies_banner mt-8 xl:mt-0 xl:absolute top-[31rem] left-0 w-full z-1">
 				<CompaniesBanner />
 				
 			</div>

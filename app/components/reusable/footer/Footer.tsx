@@ -21,12 +21,12 @@ export default function Footer() {
 	return (
 		<footer className="bg-second  pt-16">
 			{/* Top */}
-			<div className="px-[10.31rem]">
-				<div className="flex justify-between items-start pb-[1.94rem]">
+			<div className="px-4 md:px-6 lg:px-[10.31rem]">
+				<div className="md:flex justify-between items-start pb-[1.94rem]">
 					{/* Brand + blurb */}
 					<div className="space-y-4">
 						<LogoWithoutText />
-						<p className="w-[18.9375rem]">
+						<p className="md:w-[18.9375rem] pb-4 md:pb-0">
 							A good design is not only aesthetically pleasing, but also
 							functional. It should be able to solve the problem.
 						</p>
@@ -37,7 +37,7 @@ export default function Footer() {
 						<h4 className="pb-7 text-sm font-semibold text-white/90">
 							Sections
 						</h4>
-						<div className="flex gap-26">
+						<div className="flex gap-8 md:flex-row md:gap-26">
 							{columns.map((links, i) => (
 								<nav key={i} className="space-y-7">
 									{links.map((item, index2) => (
@@ -53,8 +53,8 @@ export default function Footer() {
 			</div>
 
 			{/* Bottom bar */}
-			<div className="bg-black ps-[9.06rem] pe-[10.31rem] py-8 flex justify-between items-center">
-				<p className="text-xs">
+			<div className="bg-black ps-4 pe-4 md:ps-[9.06rem] md:pe-[10.31rem] py-8 flex flex-col md:flex-row justify-between items-center">
+				<p className="text-xs pb-4 md:pb-0">
 					All Rights Reserved {brand}.com {year}
 				</p>
 

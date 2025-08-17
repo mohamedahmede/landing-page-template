@@ -6,9 +6,9 @@ import OrbitLogo from "../../reusable/icons/guideSection/OrbitLogo";
 
 const GuideSection = () => {
 	return (
-		<section className="px-[10.31rem] pt-[1.94rem] pb-11 bg-black">
-			<div className="flex gap-6">
-				<div className="relative left w-[42.375rem] h-[42.375rem]">
+		<section className="px-4 md:px-8 xl:px-[10.31rem] pt-[1.94rem] pb-11 -mt-px bg-black">
+			<div className="flex flex-col justify-center items-center md:flex-row gap-6">
+				<div className="relative left w-[20rem] h-[20rem] lg:w-[42.375rem] lg:h-[42.375rem]">
 					<Orbit
 						className="w-full h-full"
 						center={
@@ -114,10 +114,10 @@ const GuideSection = () => {
 
 				{/* RIGHT */}
 				<div className="right flex flex-col items-start justify-center text-white">
-					<h2 className="w-[27.6875rem] pb-3">
+					<h2 className="lg:w-[27.6875rem] pb-3">
 						We&apos;re here to guide and help you at all times
 					</h2>
-					<p className="w-[24.0625rem] pb-[1.56rem]">
+					<p className="lg:w-[24.0625rem] pb-[1.56rem]">
 						A good design is not only aesthetically pleasing, but also
 						functional. It should be able to solve the problem
 					</p>

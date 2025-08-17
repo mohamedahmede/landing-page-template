@@ -14,10 +14,10 @@ const GetInTouch = () => {
 	const initialValues: ContactValues = { email: "", name: "", message: "" };
 
 	return (
-		<section className="relative overflow-hidden pt-[18.19rem] pb-[4.95rem] bg-black text-white">
-			<div className="flex  items-center gap-[4.27rem] ps-[8.13rem] pe-[12.62rem]">
+		<section className="relative overflow-hidden pt-4 xl:pt-[18.19rem] pb-28 xl:pb-[4.95rem] bg-black text-white">
+			<div className="sm:flex sm:flex-row items-center gap-[4.27rem] px-4 sm:px-8 xl:ps-[8.13rem] xl:pe-[12.62rem]">
 				{/* Left: your Figma SVG */}
-				<div className="relative aspect-square w-[33.54263rem]">
+				<div className="absolute sm:-top-[-50%] translate-y-1/2 sm:top-[unset] sm:translate-y-0 left-0 sm:relative aspect-square w-[20rem] lg:w-[33.54263rem]">
 					{/* optional tiny glow blobs */}
 					<div className="pointer-events-none absolute left-4 top-6 size-24 rounded-full bg-white/10 blur-3xl" />
 					<div className="pointer-events-none absolute bottom-6 right-8 size-28 rounded-full bg-white/10 blur-3xl" />
@@ -37,12 +37,12 @@ const GetInTouch = () => {
 				<div className="flex items-center">
 					<div className="w-full max-w-xl">
 						<h2 className="capitalize">Get in touch</h2>
-						<p className="w-[31.4375rem]">
+						<p className="md:w-[31.4375rem]">
 							A good design is not only aesthetically pleasing, but also
 							functional. It should be able to solve the problem
 						</p>
 
-						<div className="pt-7 w-[25.5rem]">
+						<div className="pt-7 w-full md:w-[25.5rem] 2xl:w-[40rem]">
 							<Formik
 								initialValues={initialValues}
 								validationSchema={contactSchema}

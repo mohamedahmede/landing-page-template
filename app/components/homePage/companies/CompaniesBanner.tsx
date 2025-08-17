@@ -3,15 +3,15 @@ import CustomButton from "../../reusable/buttons/CustomButton";
 
 const CompaniesBanner = () => {
 	return (
-		<div className="w-full px-[10.31rem]">
+		<div className="w-full px-4 md:px-8 xl:px-[10.31rem]">
 			<div
-				className=" pt-[6.19rem] pb-18 ps-[6.06rem] w-full rounded-[2.5rem] relative"
+				className=" pt-[6.19rem] pb-18 px-4 md:px-8 lg:ps-[6.06rem] w-full rounded-[2.5rem] relative flex flex-col items-center lg:items-start"
 				style={{
 					background: "linear-gradient(136deg, #FF9898 14.73%, #8054FF 86.33%)",
 				}}
 			>
-				<h3 className=" pb-3">Love Our Tool?</h3>
-				<h2 className="w-[31.1875rem] pb-9">
+				<h3 className=" pb-3 text-center lg:text-left">Love Our Tool?</h3>
+				<h2 className="lg:w-[31.1875rem] pb-9 text-center lg:text-left">
 					Fell Free to Join our 15 Days Free Trial
 				</h2>
 				<CustomButton
@@ -19,7 +19,7 @@ const CompaniesBanner = () => {
 					title="Download Template"
 					url="https://github.com/mohamedahmede/landing-page-template/tree/main"
 				/>
-				<div className="absolute top-8 -right-[11rem] w-[45.72869rem] h-[23.0625rem] ">
+				<div className="hidden xl:block xl:absolute top-8 -right-[11rem] w-[45.72869rem] h-[23.0625rem] ">
 					<Image src="/images/companies-map.svg" alt="companies-banner" fill />
 				</div>
 			</div>
