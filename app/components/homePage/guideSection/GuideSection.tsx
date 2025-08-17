@@ -6,7 +6,7 @@ import OrbitLogo from "../../reusable/icons/guideSection/OrbitLogo";
 
 const GuideSection = () => {
 	return (
-		<section className="px-[10.31rem] pt-[1.94rem] pb-11">
+		<section className="px-[10.31rem] pt-[1.94rem] pb-11 bg-black">
 			<div className="flex gap-6">
 				<div className="relative left w-[42.375rem] h-[42.375rem]">
 					<Orbit
