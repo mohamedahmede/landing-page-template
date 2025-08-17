@@ -47,7 +47,8 @@ const featureBoxesDummyData = [
 
 const FeatureBoxes = () => {
 	return (
-		<section className=" px-[10.31rem] bg-black">
+		
+		<section className=" px-[10.31rem] bg-black relative z-10 mt-31">
 			<h2>Feature Boxes</h2>
 			<p className="w-[36.0625rem] pb-[2.06rem]">
 				A good design is not only aesthetically pleasing, but also functional.

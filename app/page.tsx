@@ -16,7 +16,8 @@ export default function Home() {
 			<div className="relative h-[24rem] w-full">
 				<div className="h-[24rem] bg-black absolute top-0 left-[-5%] rounded-b-[50%] w-[108.306rem]"></div>
 			</div>
-			<div className="relative h-[24rem] w-full mt-[18rem]">
+			<div className="h-[18rem]"></div>
+			<div className="absolute h-[24rem] w-full ">
 				<div className="h-[24rem] bg-black absolute top-0 left-[-5%] rounded-t-[50%] w-[108.306rem]"></div>
 			</div>
 			<FeatureBoxes />
