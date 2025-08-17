@@ -35,6 +35,7 @@ export default function TextArea({
         id={htmlId}
         {...field}
         rows={rows}
+        style={{ resize: "none" }}
         placeholder={placeholder}
         className={`w-full leading-5 rounded-[0.3125rem] bg-second px-7 py-3 text-sm text-secondary outline-none focus:border-white/20 ${showError ? "border-red-400/60" : ""} ${className}`}
       />
